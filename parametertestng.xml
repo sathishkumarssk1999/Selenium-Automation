@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite">
+
+    <parameter name="email" value="fekifa5804@rentaen.com" ></parameter>
+    <parameter name="pass" value="fekifa5804@" ></parameter>
+
+
+    <test name="chrome test">
+        <parameter name="browser" value="chrome" ></parameter>
+        <classes>
+            <class name="firstproject.parameter">
+            </class>
+        </classes>
+    </test>
+
+    <test name="firefox test">
+        <parameter name="browser" value="firefox" ></parameter>
+        <classes>
+            <class name="firstproject.parameter">
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

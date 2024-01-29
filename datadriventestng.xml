@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="all possible logins">
+
+    <test name="first login">
+        <parameter name="email" value="fekifa5804@rentaen.com" ></parameter>
+        <parameter name="pass" value="fekifa5804@" ></parameter>
+        <classes>
+            <class name="POM.bothcorrect"/>
+        </classes>
+    </test>
+
+
+    <test name="second login">
+        <parameter name="email" value="fekifa58041@rentaen.com" ></parameter>
+        <parameter name="pass" value="fekifa5804@1" ></parameter>
+        <classes>
+            <class name="POM.bothincorrect"/>
+        </classes>
+    </test>
+
+    <test name="third login">
+        <parameter name="email" value="fekifa58041@rentaen.com" ></parameter>
+        <parameter name="pass" value="fekifa5804@" ></parameter>
+        <classes>
+            <class name="POM.correctpassword"/>
+        </classes>
+    </test>
+
+    <test name="fourth login">
+        <parameter name="email" value="fekifa5804@rentaen.com" ></parameter>
+        <parameter name="pass" value="fekifa58041@" ></parameter>
+        <classes>
+            <class name="POM.correctusername"/>
+        </classes>
+    </test>
+</suite>
