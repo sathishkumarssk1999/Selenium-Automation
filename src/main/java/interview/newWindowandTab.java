@@ -1,16 +1,17 @@
 package interview;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class interview {
 
-      @Test
-      public void inter() throws InterruptedException {
+public class newWindowandTab {
+
+    @Test
+    public void inter() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com/");
@@ -29,9 +30,9 @@ public class interview {
         WebElement Answer = driver.findElement(By.xpath("(//*[@class='a-badge-label-inner a-text-ellipsis'])[1]"));
         System.out.println(Answer.getText());
     }
-   @Test
-   public void newwindow()
-    {
+
+    @Test
+    public void newwindow() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/");
@@ -41,9 +42,9 @@ public class interview {
         driver.get("https://opensource.saucelabs.com/");
 
     }
+
     @Test
-    public void newtab()
-    {
+    public void newtab() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/");
@@ -51,7 +52,6 @@ public class interview {
         driver.switchTo().newWindow(WindowType.TAB);
 // Loads Sauce Labs open source website in the newly opened window
         driver.get("https://opensource.saucelabs.com/");
-
 
 
     }
