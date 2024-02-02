@@ -7,13 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+
 import java.io.IOException;
 
-public class alert
-{
-   @Test
-    public void alertmsg() throws IOException
-    {
+public class alert {
+    @Test
+    public void alertmsg() throws IOException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/alert");
@@ -33,9 +32,9 @@ public class alert
         System.out.println(name);
 
     }
+
     @Test
-    public void validation()
-    {
+    public void validation() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/");

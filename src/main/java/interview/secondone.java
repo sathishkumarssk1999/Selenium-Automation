@@ -11,8 +11,9 @@ import org.testng.annotations.Test;
 
 public class secondone {
 
+
     @Test
-    public void second () throws InterruptedException {
+    public void second() throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -22,15 +23,13 @@ public class secondone {
         WebElement name = driver.findElement(By.xpath("(//*[@class='dropdown-toggle'])[3]"));
         a.moveToElement(name).perform();
 
-          Thread.sleep(3000);
-          driver.findElement(By.xpath("//a[text()='Drag and Drop ']")).click();
-          driver.findElement(By.xpath("//*[@href='Static.html']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[text()='Drag and Drop ']")).click();
+        driver.findElement(By.xpath("//*[@href='Static.html']")).click();
 
         WebElement source = driver.findElement(By.xpath("//*[@id='angular']"));
         WebElement target = driver.findElement(By.xpath("//*[@id='droparea']"));
-        a.dragAndDrop(source,target).perform();
-
-
+        a.dragAndDrop(source, target).perform();
 
 
     }

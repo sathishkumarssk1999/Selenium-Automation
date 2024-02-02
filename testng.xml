@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="F:/Automation/Selenium-Automation">
+        <classes>
+            <class name="POM.executefile">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+            <class name="POM.fourlogintestcases">
+                <methods>
+                    <include name="fourlogins"/>
+                </methods>
+            </class>
+            <class name="interview.firstrountmyself">
+                <methods>
+                    <include name="test"/>
+                </methods>
+            </class>
+            <class name="interview.newWindowandTab">
+                <methods>
+                    <include name="inter"/>
+                    <include name="newwindow"/>
+                    <include name="newtab"/>
+                </methods>
+            </class>
+            <class name="interview.secondone">
+                <methods>
+                    <include name="second"/>
+                </methods>
+            </class>
+            <class name="practice.alert">
+                <methods>
+                    <include name="alertmsg"/>
+                    <include name="validation"/>
+                </methods>
+            </class>
+            <class name="practice.button">
+                <methods>
+                    <include name="buttons"/>
+                </methods>
+            </class>
+            <class name="practice.dropdown">
+                <methods>
+                    <include name="select"/>
+                    <include name="drop"/>
+                </methods>
+            </class>
+            <class name="practice.frame">
+                <methods>
+                    <include name="frames"/>
+                    <include name="drag"/>
+                </methods>
+            </class>
+            <class name="practice.hower">
+                <methods>
+                    <include name="mouse"/>
+                </methods>
+            </class>
+            <class name="practice.input">
+                <methods>
+                    <include name="input"/>
+                    <include name="methods"/>
+                </methods>
+            </class>
+            <class name="dataProvider.getInputFromExcel">
+                <methods>
+                    <include name="getDataFromExcel"/>
+                </methods>
+            </class>
+            <class name="firstproject.dependency">
+                <methods>
+                    <include name="startcar"/>
+                    <include name="drivercar"/>
+                    <include name="fastcar"/>
+                    <include name="stopcar"/>
+                </methods>
+            </class>
+            <class name="firstproject.firstjavaproject">
+                <methods>
+                    <include name="setup"/>
+                    <include name="test"/>
+                    <include name="sample"/>
+                    <include name="alwaysrun"/>
+                    <include name="enable"/>
+                    <include name="description"/>
+                </methods>
+            </class>
+            <class name="firstproject.parameter">
+                <methods>
+                    <include name="para"/>
+                </methods>
+            </class>
+            <class name="firstproject.seleniumtest">
+                <methods>
+                    <include name="setup"/>
+                    <include name="scroll"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
