@@ -4,7 +4,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.concurrent.TimeUnit;
 
 
@@ -32,25 +31,25 @@ public class newWindowandTab {
     }
 
     @Test
-    public void newwindow() {
+    public void newWindow() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/");
-// A new window is opened and switches to it
+        // A new window is opened and switches to it
         driver.switchTo().newWindow(WindowType.WINDOW);
-// Loads Sauce Labs open source website in the newly opened window
+        // Loads Sauce Labs open source website in the newly opened window
         driver.get("https://opensource.saucelabs.com/");
 
     }
 
     @Test
-    public void newtab() {
+    public void newTab() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/");
-// A new tab is opened and switches to it
+        // A new tab is opened and switches to it
         driver.switchTo().newWindow(WindowType.TAB);
-// Loads Sauce Labs open source website in the newly opened window
+        // Loads Sauce Labs open source website in the newly opened window
         driver.get("https://opensource.saucelabs.com/");
 
 
