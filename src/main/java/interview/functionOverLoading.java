@@ -1,21 +1,17 @@
 package interview;
 
-class function
-{
-    public void music()
-    {
+class function {
+    public void music() {
         System.out.println("music");
     }
-    public void music(int a)
-    {
+
+    public void music(int a) {
         System.out.println(a);
     }
 }
 
-public class functionoverloading
-{
-    public static void main (String args[])
-    {
+public class functionOverLoading {
+    public static void main(String[] args) {
         function test = new function();
         int n = 5;
         test.music(n);
