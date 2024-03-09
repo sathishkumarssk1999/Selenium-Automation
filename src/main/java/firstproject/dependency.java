@@ -6,23 +6,23 @@ import org.testng.annotations.Test;
 public class dependency {
 
     @Test
-    void startcar() {
+    void startCar() {
         System.out.println(" Start Car ");
     }
 
-    @Test(dependsOnMethods = "startcar")
-    void drivercar() {
+    @Test(dependsOnMethods = "startCar")
+    void driverCar() {
         System.out.println(" driver Car ");
     }
 
-    @Test(dependsOnMethods = "drivercar")
-    void fastcar() {
+    @Test(dependsOnMethods = "driverCar")
+    void fastCar() {
         System.out.println(" fast Car ");
         throw new RuntimeException();
     }
 
-    @Test(dependsOnMethods = "fastcar")
-    void stopcar() {
+    @Test(dependsOnMethods = "fastCar")
+    void stopCar() {
         System.out.println(" stop Car ");
         Assert.fail();
 

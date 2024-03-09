@@ -8,13 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
-public class button
-{
+public class button {
     @Test
-    public void buttons() throws IOException
-    {
+    public void buttons() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/buttons");
@@ -30,11 +26,11 @@ public class button
 
         int x = point.getX();
         int y = point.getY();
-        System.out.println("x and y coordinates are " + x +" " + y );
+        System.out.println("x and y coordinates are " + x + " " + y);
 
         WebElement color = driver.findElement(By.xpath("//*[@id= 'color']"));
         String result = color.getCssValue("background-color");
-        System.out.println("button color"+result);
+        System.out.println("button color" + result);
 
         boolean enable = driver.findElement(By.xpath("//*[@id= 'isDisabled']")).isEnabled();
         System.out.println(enable);

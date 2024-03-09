@@ -7,21 +7,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-
-
 public class input {
 
     @Test
-    public void input()
-    {
+    public void inputFunction() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/edit");
     }
 
     @Test
-    public void methods()
-    {
+    public void methods() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/edit");

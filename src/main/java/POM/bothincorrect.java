@@ -11,9 +11,8 @@ import org.testng.annotations.Test;
 public class bothincorrect {
 
     @Test
-    @Parameters( {"email" , "pass"} )
-    public void incorrect(String email, String pass)
-    {
+    @Parameters({"email", "pass"})
+    public void incorrect(String email, String pass) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/");
@@ -24,7 +23,7 @@ public class bothincorrect {
         WebElement username = driver.findElement(By.xpath("//*[@name='email']"));
         username.sendKeys(email);
 
-        WebElement password =  driver.findElement(By.xpath("//*[@name='password']"));
+        WebElement password = driver.findElement(By.xpath("//*[@name='password']"));
         password.sendKeys(pass);
 
         WebElement button = driver.findElement(By.xpath("(//*[@class='button is-primary'])[1]"));

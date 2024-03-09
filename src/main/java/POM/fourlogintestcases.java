@@ -21,13 +21,12 @@ public class fourlogintestcases {
 
     @DataProvider(name = "logindata")
     public String[][] login() {
-         return data;
+        return data;
     }
 
 
     @Test(dataProvider = "logindata")
-    public void fourlogins(String email, String pass)
-    {
+    public void fourlogins(String email, String pass) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/");

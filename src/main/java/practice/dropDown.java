@@ -9,15 +9,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
-public class dropdown
-{
+public class dropDown {
     @Test
-    public void select() throws IOException, InterruptedException
-    {
+    public void select() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/dropdowns");
@@ -27,8 +23,8 @@ public class dropdown
         // Find the WebElement and click on it
         WebElement fruits = driver.findElement(By.xpath("//*[@id= 'fruits']"));
         fruits.click();
-        Select myfruits = new Select(fruits);
-        myfruits.selectByVisibleText("Apple");
+        Select myFruits = new Select(fruits);
+        myFruits.selectByVisibleText("Apple");
         Thread.sleep(5000);
 
         WebElement hero = driver.findElement(By.xpath("//*[@id= 'superheros']"));
@@ -38,16 +34,15 @@ public class dropdown
         Thread.sleep(2000);
         name.selectByValue("ta");
 
-        JavascriptExecutor js = (JavascriptExecutor)driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
 
         WebElement lang = driver.findElement(By.xpath("//*[@id= 'lang']"));
         lang.click();
-        Select prog = new Select(lang);
-        prog.selectByValue("sharp");
-        List<WebElement> allvalue = prog.getAllSelectedOptions();
-        for (WebElement WebElement : allvalue)
-        {
+        Select ss = new Select(lang);
+        ss.selectByValue("sharp");
+        List<WebElement> allValue = ss.getAllSelectedOptions();
+        for (WebElement WebElement : allValue) {
             System.out.println(WebElement.getText());
         }
 
@@ -58,12 +53,10 @@ public class dropdown
         india.selectByValue("India");
 
 
-
     }
 
     @Test
-    public void drop() throws IOException, InterruptedException
-    {
+    public void drop() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/dropdowns");
@@ -76,9 +69,8 @@ public class dropdown
 
         List<WebElement> result = count.getOptions();
 
-        for (WebElement ans : result )
-        {
-          System.out.println(ans.getText());
+        for (WebElement ans : result) {
+            System.out.println(ans.getText());
         }
 
 

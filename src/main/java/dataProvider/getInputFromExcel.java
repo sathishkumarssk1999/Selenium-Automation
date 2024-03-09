@@ -41,8 +41,8 @@ public class getInputFromExcel {
     }
 
 
-   @Test(dataProvider = "loginData")
-   public void loginTest(String email, String pass) {
+    @Test(dataProvider = "loginData")
+    public void loginTest(String email, String pass) {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();

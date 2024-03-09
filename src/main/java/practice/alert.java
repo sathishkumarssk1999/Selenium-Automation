@@ -8,11 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
 public class alert {
     @Test
-    public void alertmsg() throws IOException {
+    public void alertMsg() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://letcode.in/alert");
@@ -41,19 +39,19 @@ public class alert {
         driver.manage().window().maximize();
 
         //is displayed
-        WebElement vali = driver.findElement(By.xpath(" //*[@class = 'button is-primary is-rounded is-small'][1] "));
-        boolean answer = vali.isDisplayed();
+        WebElement v = driver.findElement(By.xpath(" //*[@class = 'button is-primary is-rounded is-small'][1] "));
+        boolean answer = v.isDisplayed();
         System.out.println(answer);
 
         //is enabled
         driver.navigate().to("https://letcode.in/edit");
-        boolean answers = driver.findElement(By.xpath("//*[@id= 'noEdit']")).isEnabled();
-        System.out.println(answers);
+        boolean answer2 = driver.findElement(By.xpath("//*[@id= 'noEdit']")).isEnabled();
+        System.out.println(answer2);
 
         //is selected
         driver.navigate().to("https://letcode.in/radio");
-        boolean answerss = driver.findElement(By.xpath("//*[@class= 'checkbox'][1]")).isSelected();
-        System.out.println(answerss);
+        boolean answer3 = driver.findElement(By.xpath("//*[@class= 'checkbox'][1]")).isSelected();
+        System.out.println(answer3);
 
     }
 }
